@@ -1,0 +1,11 @@
+D:\Local Disk E_9120131428\Apps\Windows Phone\TN Universal\APP-NEw\AppStudio.Data\Bin\Release\AppStudio.Data.dll
+D:\Local Disk E_9120131428\Apps\Windows Phone\TN Universal\APP-NEw\AppStudio.Data\Bin\Release\AppStudio.Data.pdb
+D:\Local Disk E_9120131428\Apps\Windows Phone\TN Universal\APP-NEw\AppStudio.Data\Bin\Release\HtmlAgilityPack-PCL.dll
+D:\Local Disk E_9120131428\Apps\Windows Phone\TN Universal\APP-NEw\AppStudio.Data\Bin\Release\Newtonsoft.Json.dll
+D:\Local Disk E_9120131428\Apps\Windows Phone\TN Universal\APP-NEw\AppStudio.Data\Bin\Release\SharpGIS.GZipWebClient.dll
+D:\Local Disk E_9120131428\Apps\Windows Phone\TN Universal\APP-NEw\AppStudio.Data\Bin\Release\WPAppStudio.Shared2.dll
+D:\Local Disk E_9120131428\Apps\Windows Phone\TN Universal\APP-NEw\AppStudio.Data\Bin\Release\HtmlAgilityPack-PCL.xml
+D:\Local Disk E_9120131428\Apps\Windows Phone\TN Universal\APP-NEw\AppStudio.Data\Bin\Release\Newtonsoft.Json.xml
+D:\Local Disk E_9120131428\Apps\Windows Phone\TN Universal\APP-NEw\AppStudio.Data\obj\Release\AppStudio.Data.csprojResolveAssemblyReference.cache
+D:\Local Disk E_9120131428\Apps\Windows Phone\TN Universal\APP-NEw\AppStudio.Data\obj\Release\AppStudio.Data.dll
+D:\Local Disk E_9120131428\Apps\Windows Phone\TN Universal\APP-NEw\AppStudio.Data\obj\Release\AppStudio.Data.pdb

@@ -1,0 +1,106 @@
+<phone:PhoneApplicationPage
+    x:Class="NokiaDev.AboutPageSample.Views.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:cimbalino="clr-namespace:Cimbalino.Phone.Toolkit.Behaviors;assembly=Cimbalino.Phone.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    DataContext="{Binding AboutViewModel, Source={StaticResource Locator}}"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="About" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <StackPanel Margin="0,-12,0,24">
+                <TextBlock Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                           Text="About "
+                           Foreground="{StaticResource PhoneAccentBrush}" />
+                <TextBlock Style="{StaticResource PhoneTextLargeStyle}"> 
+                    by <Run Text="{Binding Author}" />
+                </TextBlock>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,18,0,0">
+                    <TextBlock FontWeight="Bold" 
+                               FontSize="{StaticResource PhoneFontSizeMedium}" 
+                               Style="{StaticResource PhoneTextNormalStyle}" Text="Version:" />
+                    <TextBlock Margin="0"  Text="{Binding Version}"
+                               Style="{StaticResource PhoneTextNormalStyle}" x:Name="AppVersion" />
+                </StackPanel>
+
+                <TextBlock Style="{StaticResource PhoneTextNormalStyle}"
+                           FontSize="{StaticResource PhoneFontSizeMedium}" 
+                           Margin="12,12,0,0" FontWeight="Bold"
+                           Text="Copyright (c) 2013 Nokia Developer Wiki." />
+
+                <TextBlock Style="{StaticResource PhoneTextNormalStyle}" 
+                           Margin="12,24,0,0"  FontSize="{StaticResource PhoneFontSizeSmall}"
+                           TextWrapping="Wrap">
+                     This application show an 'About page' sample for Windows Phone applications.
+                    <LineBreak/>See more about it, please see the following reference:
+                </TextBlock>
+                <HyperlinkButton NavigateUri="http://www.developer.nokia.com/Community/Wiki/About_page_for_Windows_Phone_applications" 
+                                 Foreground="{StaticResource PhoneAccentBrush}"
+                                 TargetName="_new" FontSize="{StaticResource PhoneFontSizeSmall}"
+                                 HorizontalAlignment="Left" 
+                                 Content="About page for Windows Phone applications" />
+
+                <TextBlock Style="{StaticResource PhoneTextNormalStyle}" 
+                           Margin="12,24,0,12" FontWeight="Bold"
+                           Text="More informations:" 
+                           FontSize="{StaticResource PhoneFontSizeMedium}" />
+
+               
+
+                <HyperlinkButton NavigateUri="http://www.developer.nokia.com/"
+                                 Foreground="{StaticResource PhoneAccentBrush}"
+                                 TargetName="_new" 
+                                 HorizontalAlignment="Left" 
+                                 Content="Support" />
+
+                <HyperlinkButton NavigateUri="http://www.developer.nokia.com/"
+                                 Foreground="{StaticResource PhoneAccentBrush}"
+                                 TargetName="_new" 
+                                 HorizontalAlignment="Left" 
+                                 Content="Privacy Policy" />
+
+            </StackPanel>
+        </Grid>
+
+        <i:Interaction.Behaviors>
+            <cimbalino:ApplicationBarBehavior>
+                <cimbalino:ApplicationBarIconButton Command="{Binding RateCommand, Mode=OneTime}" 
+                                                    IconUri="/Images/appbar.rate.png" 
+                                                    Text="Rate it" />
+                <cimbalino:ApplicationBarIconButton Command="{Binding SendFeedbackCommand, Mode=OneTime}" 
+                                                    IconUri="/Images/appbar.reply.email.png" 
+                                                    Text="Feedback" />
+                <cimbalino:ApplicationBarIconButton Command="{Binding ShareToMailCommand, Mode=OneTime}" 
+                                                    IconUri="/Images/appbar.email.png" 
+                                                    Text="Email" />
+                <cimbalino:ApplicationBarIconButton Command="{Binding ShareSocialNetworkCommand, Mode=OneTime}" 
+                                                    IconUri="/Images/appbar.share.png" 
+                                                    Text="Share it" />
+            </cimbalino:ApplicationBarBehavior>
+        </i:Interaction.Behaviors>
+    </Grid>
+</phone:PhoneApplicationPage>

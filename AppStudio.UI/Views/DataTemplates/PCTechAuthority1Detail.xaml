@@ -1,0 +1,23 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:AppStudio.Controls;assembly=AppStudio"
+    xmlns:mytoolkit="clr-namespace:MyToolkit.Controls;assembly=MyToolkit.Extended"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone">
+
+    <DataTemplate x:Name="PCTechAuthority1DetailHeader">
+        <StackPanel Orientation="Horizontal" Margin="0,7,0,0">
+            <TextBlock Text="{Binding Title}" FontSize="56" Foreground="{StaticResource AppForegroundColor}" Width="440" />
+        </StackPanel>
+    </DataTemplate>
+
+    <!-- InstanceDescription -->
+    <DataTemplate x:Name="PCTechAuthority1DetailLayout">
+        <ScrollViewer Margin="10,5,5,5">
+            <Grid>
+                <mytoolkit:FixedHtmlTextBlock Html="{Binding Content}" FontSize="24" Foreground="{StaticResource AppForegroundColor}"/>
+            </Grid>
+        </ScrollViewer>
+    </DataTemplate>
+
+</ResourceDictionary>

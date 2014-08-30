@@ -1,0 +1,20 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="AppStudio" EntryPointType="AppStudio.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="AppStudio" Source="AppStudio.dll" />
+    <AssemblyPart x:Name="AppStudio.Data" Source="AppStudio.Data.dll" />
+    <AssemblyPart x:Name="Cimbalino.Phone.Toolkit.Background" Source="Cimbalino.Phone.Toolkit.Background.dll" />
+    <AssemblyPart x:Name="Cimbalino.Phone.Toolkit" Source="Cimbalino.Phone.Toolkit.dll" />
+    <AssemblyPart x:Name="Microsoft.Advertising.Mobile" Source="Microsoft.Advertising.Mobile.dll" />
+    <AssemblyPart x:Name="Microsoft.Advertising.Mobile.UI" Source="Microsoft.Advertising.Mobile.UI.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+    <AssemblyPart x:Name="MyToolkit" Source="MyToolkit.dll" />
+    <AssemblyPart x:Name="MyToolkit.Extended" Source="MyToolkit.Extended.dll" />
+    <AssemblyPart x:Name="Newtonsoft.Json" Source="Newtonsoft.Json.dll" />
+    <AssemblyPart x:Name="Nokia.Music.Wp8" Source="Nokia.Music.Wp8.dll" />
+    <AssemblyPart x:Name="SharpGIS.GZipWebClient" Source="SharpGIS.GZipWebClient.dll" />
+    <AssemblyPart x:Name="System.Windows.Interactivity" Source="System.Windows.Interactivity.dll" />
+    <AssemblyPart x:Name="WPAppStudio.Shared2" Source="WPAppStudio.Shared2.dll" />
+    <AssemblyPart x:Name="HtmlAgilityPack-PCL" Source="HtmlAgilityPack-PCL.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Maps" Source="Microsoft.Phone.Controls.Maps.dll" />
+  </Deployment.Parts>
+</Deployment>

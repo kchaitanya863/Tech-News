@@ -1,0 +1,89 @@
+<Application
+    x:Class="AppStudio.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:AppStudio.Controls"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">
+
+  <!--Application Resources-->
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Styles/AppStyles.xaml"/>
+        <ResourceDictionary Source="Styles/ButtonStyles.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/WhatsNew.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/WhatsNew1Detail.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/TechUpdates.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/TechUpdates1Detail.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/SelectSource.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/AppleInsider.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/AppleInsider1Detail.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/TheNextWeb.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/TheNextWeb1Detail.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/CrackBerry.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/CrackBerry1Detail.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/Microsoft.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/Microsoft1Detail.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/AndroidCentral.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/AndroidCentral1Detail.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/WebOS.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/WebOS1Detail.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/PCTechAuthority.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/PCTechAuthority1Detail.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/CNET.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/CNET1Detail.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/Engadget.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/Engadget1Detail.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/Gizmodo.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/Gizmodo1Detail.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/Maclife.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/Maclife1Detail.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/Wired.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/Wired1Detail.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/PCWORLD.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/PCWORLD1Detail.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/TechCrunch.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/TechCrunch1Detail.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/To5Mac.xaml"/>
+        <ResourceDictionary Source="Views/DataTemplates/To5Mac1Detail.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+
+      <sys:String x:Key="AppName">TechNews</sys:String>
+      <sys:String x:Key="AppTitle">TechNews</sys:String>
+
+      <commands:ActionCommands xmlns:commands="clr-namespace:AppStudio" x:Key="ActionCommands"/>
+      <local:LocalizedStrings xmlns:local="clr-namespace:AppStudio.Resources" x:Key="LocalizedStrings"/>
+
+      <!-- Converters -->
+      <controls:MultilineConverter x:Key="MultilineConverter"/>
+      <controls:TextPlainConverter x:Key="TextPlainConverter"/>
+      <controls:ThumbnailConverter x:Key="ThumbnailConverter"/>
+
+      <!-- ImageButton Style -->
+      <Style x:Key="ImageButtonStyle" TargetType="Button">
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Template">
+          <Setter.Value>
+            <ControlTemplate TargetType="Button">
+              <Grid Background="Transparent">
+                <Border x:Name="ButtonBackground" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="0" Margin="{StaticResource PhoneTouchTargetOverhang}">
+                  <ContentControl x:Name="ContentContainer" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Padding="{TemplateBinding Padding}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                </Border>
+              </Grid>
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style>
+    </ResourceDictionary>
+  </Application.Resources>
+
+  <Application.ApplicationLifetimeObjects>
+    <!--Required object that handles lifetime events for the application-->
+    <shell:PhoneApplicationService
+        Launching="Application_Launching" Closing="Application_Closing"
+        Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+  </Application.ApplicationLifetimeObjects>
+</Application>

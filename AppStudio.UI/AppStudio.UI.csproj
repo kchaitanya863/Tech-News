@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{81854126-91f2-4ec9-a08b-0a06b2c0185e}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AppStudio</RootNamespace>
+    <AssemblyName>AppStudio</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>AppStudio_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>AppStudio.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+  <Content Include="Assets\Icons\Dark\GoToSource.png" />
+  <Content Include="Assets\Icons\Dark\LockScreen.png" />
+  <Content Include="Assets\Icons\Dark\PinToStart.png" />
+  <Content Include="Assets\Icons\Dark\Refresh.png" />
+  <Content Include="Assets\Icons\Dark\Share.png" />
+  <Content Include="Assets\Icons\Dark\TextToSpeech.png" />
+  <Content Include="Assets\Icons\Light\GoToSource.png" />
+  <Content Include="Assets\Icons\Light\LockScreen.png" />
+  <Content Include="Assets\Icons\Light\PinToStart.png" />
+  <Content Include="Assets\Icons\Light\Refresh.png" />
+  <Content Include="Assets\Icons\Light\Share.png" />
+  <Content Include="Assets\Icons\Light\TextToSpeech.png" />
+  <Content Include="Assets\AlignmentGrid.png" />
+  <Content Include="Assets\NoImage.png" />
+  <Content Include="Views\DataTemplates\WhatsNew.xaml" />
+  <Content Include="Views\DataTemplates\WhatsNew1Detail.xaml" />
+  <Content Include="Views\DataTemplates\TechUpdates.xaml" />
+  <Content Include="Views\DataTemplates\TechUpdates1Detail.xaml" />
+  <Content Include="Views\DataTemplates\SelectSource.xaml" />
+  <Content Include="Views\DataTemplates\AppleInsider.xaml" />
+  <Content Include="Views\DataTemplates\AppleInsider1Detail.xaml" />
+  <Content Include="Views\DataTemplates\TheNextWeb.xaml" />
+  <Content Include="Views\DataTemplates\TheNextWeb1Detail.xaml" />
+  <Content Include="Views\DataTemplates\CrackBerry.xaml" />
+  <Content Include="Views\DataTemplates\CrackBerry1Detail.xaml" />
+  <Content Include="Views\DataTemplates\Microsoft.xaml" />
+  <Content Include="Views\DataTemplates\Microsoft1Detail.xaml" />
+  <Content Include="Views\DataTemplates\AndroidCentral.xaml" />
+  <Content Include="Views\DataTemplates\AndroidCentral1Detail.xaml" />
+  <Content Include="Views\DataTemplates\WebOS.xaml" />
+  <Content Include="Views\DataTemplates\WebOS1Detail.xaml" />
+  <Content Include="Views\DataTemplates\PCTechAuthority.xaml" />
+  <Content Include="Views\DataTemplates\PCTechAuthority1Detail.xaml" />
+  <Content Include="Views\DataTemplates\CNET.xaml" />
+  <Content Include="Views\DataTemplates\CNET1Detail.xaml" />
+  <Content Include="Views\DataTemplates\Engadget.xaml" />
+  <Content Include="Views\DataTemplates\Engadget1Detail.xaml" />
+  <Content Include="Views\DataTemplates\Gizmodo.xaml" />
+  <Content Include="Views\DataTemplates\Gizmodo1Detail.xaml" />
+  <Content Include="Views\DataTemplates\Maclife.xaml" />
+  <Content Include="Views\DataTemplates\Maclife1Detail.xaml" />
+  <Content Include="Views\DataTemplates\Wired.xaml" />
+  <Content Include="Views\DataTemplates\Wired1Detail.xaml" />
+  <Content Include="Views\DataTemplates\PCWORLD.xaml" />
+  <Content Include="Views\DataTemplates\PCWORLD1Detail.xaml" />
+  <Content Include="Views\DataTemplates\TechCrunch.xaml" />
+  <Content Include="Views\DataTemplates\TechCrunch1Detail.xaml" />
+  <Content Include="Views\DataTemplates\To5Mac.xaml" />
+  <Content Include="Views\DataTemplates\To5Mac1Detail.xaml" />
+</ItemGroup>
+
+  <ItemGroup>
+  <Content Include="Assets\LockScreenImage.jpg" />
+  <Content Include="Assets\ApplicationIcon.png" />
+  <Content Include="Assets\Tiles\SmallIcon.png" />
+  <Content Include="Assets\Tiles\BackgroundImage.png" />
+  <Content Include="Assets\Tiles\BackBackgroundImage.png" />
+  <Content Include="Assets\Tiles\LargeBackgroundImage.png" />
+  <Content Include="Assets\Tiles\LargeBackBackgroundImage.png" />
+  <Content Include="Assets\ApplicationLogo.png" />
+  <Content Include="Assets\ApplicationBackgroundImage.jpg" />
+  <Content Include="Assets\DataImages\Item-1ae7b0da-d4ae-47d6-96c4-40756ab04e34.png" />
+  <Content Include="Assets\DataImages\Item-7d6222f9-c2e2-4329-b996-33de13ccd80c.png" />
+  <Content Include="Assets\DataImages\Item-0d6aab38-9eef-4fbd-b33b-aca58c30c824.png" />
+  <Content Include="Assets\DataImages\images.png" />
+  <Content Include="Assets\DataImages\Item-ac23022b-bd40-4291-93e8-c04b0a681a56.png" />
+  <Content Include="Assets\DataImages\Item-3034d963-e038-4a59-9dab-c18e753426c8.png" />
+  <Content Include="Assets\DataImages\Item-3004bf29-1eb1-445d-b8f6-f57895344b6a.png" />
+  <Content Include="Assets\DataImages\Item-3e8f5066-61b0-4696-95bb-85a2634844d8.png" />
+  <Content Include="Assets\DataImages\Item-ebf6a6d7-c7d9-48af-9a9b-b4b9e7fcd430.png" />
+  <Content Include="Assets\DataImages\Item-719a0109-a926-49ec-bcc9-6a649f5cd70f.png" />
+  <Content Include="Assets\DataImages\Item-bb54358d-2099-4691-97e9-f8990740e537.png" />
+  <Content Include="Assets\DataImages\Item-490c2f45-1b3d-4c05-a7e6-20e4e73efdba.png" />
+  <Content Include="Assets\DataImages\Item-e76beb6d-d682-4036-8a8d-ee3a60e2a76c.png" />
+  <Content Include="Assets\DataImages\Item-51ff6430-bb9a-4d33-9dae-884611220418.png" />
+  <Content Include="Assets\DataImages\Item-d0d20ffd-cff2-4cad-93d5-3897c4353e46.png" />
+  <Content Include="Assets\DataImages\9711099022_23bbdd529a_o.png" />
+  <Content Include="SplashScreenImage.jpg" />
+</ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\ActionCommands.cs" />
+    <Compile Include="Common\DelegateCommand.cs" />
+    <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Common\ViewModelBase.cs" />
+    <Compile Include="Controls\LongListSelectorEx.cs" />
+    <Compile Include="Converters\MultilineConverter.cs" />
+    <Compile Include="Converters\LocalizedResourcesConverter.cs" />
+    <Compile Include="Converters\TextPlainConverter.cs" />
+    <Compile Include="Converters\ThumbnailConverter.cs" />
+    <Compile Include="Resources\LocalizedStrings.cs" />
+    <Compile Include="Services\LockScreenServices.cs" />
+    <Compile Include="Services\NavigationServices.cs" />
+    <Compile Include="Services\NokiaMapsServices.cs" />
+    <Compile Include="Services\NokiaMusicServices.cs" />
+    <Compile Include="Services\ProximityServices.cs" />
+    <Compile Include="Services\ShareServices.cs" />
+    <Compile Include="Services\SpeechServices.cs" />
+    <Compile Include="Services\TileServices.cs" />
+    <Compile Include="ViewModels\AboutThisAppViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\WhatsNewViewModel.cs" />
+    <Compile Include="ViewModels\TechUpdatesViewModel.cs" />
+    <Compile Include="ViewModels\SelectSourceViewModel.cs" />
+    <Compile Include="ViewModels\AppleInsiderViewModel.cs" />
+    <Compile Include="ViewModels\TheNextWebViewModel.cs" />
+    <Compile Include="ViewModels\CrackBerryViewModel.cs" />
+    <Compile Include="ViewModels\MicrosoftViewModel.cs" />
+    <Compile Include="ViewModels\AndroidCentralViewModel.cs" />
+    <Compile Include="ViewModels\WebOSViewModel.cs" />
+    <Compile Include="ViewModels\PCTechAuthorityViewModel.cs" />
+    <Compile Include="ViewModels\CNETViewModel.cs" />
+    <Compile Include="ViewModels\EngadgetViewModel.cs" />
+    <Compile Include="ViewModels\GizmodoViewModel.cs" />
+    <Compile Include="ViewModels\MaclifeViewModel.cs" />
+    <Compile Include="ViewModels\WiredViewModel.cs" />
+    <Compile Include="ViewModels\PCWORLDViewModel.cs" />
+    <Compile Include="ViewModels\TechCrunchViewModel.cs" />
+    <Compile Include="ViewModels\To5MacViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Views\AboutThisAppPage.xaml.cs">
+      <DependentUpon>AboutThisAppPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ImageViewer.xaml.cs">
+      <DependentUpon>ImageViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppleInsiderPage.xaml.cs">
+      <DependentUpon>AppleInsiderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TheNextWebPage.xaml.cs">
+      <DependentUpon>TheNextWebPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CrackBerryPage.xaml.cs">
+      <DependentUpon>CrackBerryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MicrosoftPage.xaml.cs">
+      <DependentUpon>MicrosoftPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AndroidCentralPage.xaml.cs">
+      <DependentUpon>AndroidCentralPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WebOSPage.xaml.cs">
+      <DependentUpon>WebOSPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PCTechAuthorityPage.xaml.cs">
+      <DependentUpon>PCTechAuthorityPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CNETPage.xaml.cs">
+      <DependentUpon>CNETPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EngadgetPage.xaml.cs">
+      <DependentUpon>EngadgetPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GizmodoPage.xaml.cs">
+      <DependentUpon>GizmodoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MaclifePage.xaml.cs">
+      <DependentUpon>MaclifePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WiredPage.xaml.cs">
+      <DependentUpon>WiredPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PCWORLDPage.xaml.cs">
+      <DependentUpon>PCWORLDPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TechCrunchPage.xaml.cs">
+      <DependentUpon>TechCrunchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\To5MacPage.xaml.cs">
+      <DependentUpon>To5MacPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WhatsNewDetail.xaml.cs">
+      <DependentUpon>WhatsNewDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TechUpdatesDetail.xaml.cs">
+      <DependentUpon>TechUpdatesDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppleInsiderDetail.xaml.cs">
+      <DependentUpon>AppleInsiderDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TheNextWebDetail.xaml.cs">
+      <DependentUpon>TheNextWebDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CrackBerryDetail.xaml.cs">
+      <DependentUpon>CrackBerryDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MicrosoftDetail.xaml.cs">
+      <DependentUpon>MicrosoftDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AndroidCentralDetail.xaml.cs">
+      <DependentUpon>AndroidCentralDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WebOSDetail.xaml.cs">
+      <DependentUpon>WebOSDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PCTechAuthorityDetail.xaml.cs">
+      <DependentUpon>PCTechAuthorityDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CNETDetail.xaml.cs">
+      <DependentUpon>CNETDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EngadgetDetail.xaml.cs">
+      <DependentUpon>EngadgetDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GizmodoDetail.xaml.cs">
+      <DependentUpon>GizmodoDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MaclifeDetail.xaml.cs">
+      <DependentUpon>MaclifeDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WiredDetail.xaml.cs">
+      <DependentUpon>WiredDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PCWORLDDetail.xaml.cs">
+      <DependentUpon>PCWORLDDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TechCrunchDetail.xaml.cs">
+      <DependentUpon>TechCrunchDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\To5MacDetail.xaml.cs">
+      <DependentUpon>To5MacDetail.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Views\AboutThisAppPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ImageViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppleInsiderPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TheNextWebPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CrackBerryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MicrosoftPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AndroidCentralPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WebOSPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PCTechAuthorityPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CNETPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EngadgetPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GizmodoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MaclifePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WiredPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PCWORLDPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TechCrunchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\To5MacPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WhatsNewDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TechUpdatesDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppleInsiderDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TheNextWebDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CrackBerryDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MicrosoftDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AndroidCentralDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WebOSDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PCTechAuthorityDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CNETDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EngadgetDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GizmodoDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MaclifeDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WiredDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PCWORLDDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TechCrunchDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\To5MacDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+        <Page Include="Styles\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\AppStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="WPAppStudio.Shared2.dll">
+      <HintPath>..\Lib\WPAppStudio.Shared2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Advertising.Mobile, Version=6.2.960.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Advertising.Mobile.UI, Version=6.2.960.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="MyToolkit">
+      <HintPath>..\packages\MyToolkit.2.0.14.0\lib\portable-win+net40+sl40+wp71\MyToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="MyToolkit.Extended">
+      <HintPath>..\packages\MyToolkit.Extended.2.0.14.0\lib\wp80\MyToolkit.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Nokia.Music.Wp8">
+      <HintPath>..\packages\NokiaMusic.3.1.5\lib\windowsphone8\Nokia.Music.Wp8.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpGIS.GZipWebClient">
+      <HintPath>..\packages\SharpGIS.GZipWebClient.1.4.0.0\lib\wp71\SharpGIS.GZipWebClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Cimbalino.Phone.Toolkit">
+      <HintPath>..\packages\Cimbalino.Phone.Toolkit.3.2.2\lib\wp8\Cimbalino.Phone.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Cimbalino.Phone.Toolkit.Background">
+      <HintPath>..\packages\Cimbalino.Phone.Toolkit.Background.3.2.2\lib\wp8\Cimbalino.Phone.Toolkit.Background.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=3.9.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppStudio.Data\AppStudio.Data.csproj">
+      <Project>{afd7b269-f398-4e9f-8c14-6f9440824161}</Project>
+      <Name>AppStudio.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>
